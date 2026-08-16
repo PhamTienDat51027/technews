@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technology News</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+
+            <div class="logo">
+                TechNews
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <nav id="menu">
+                <a href="#home">Home</a>
+                <a href="#technology">Technology</a>
+                <a href="#science">Science</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HOME -->
+    <main id="home">
+
+        <!-- HERO -->
+        <section class="hero container">
+
+            <div class="hero-image">
+                <img src="anh4.jpg" alt="Technology news">
+            </div>
+
+            <div class="hero-content">
+                <span class="category">Technology</span>
+
+                <h1>
+                    New Technology Is Changing The Way We Live
+                </h1>
+
+                <p>
+                    Technology is developing rapidly and bringing many
+                    new opportunities to people in education, business
+                    and everyday life.
+                </p>
+
+                <a href="#technology" class="read-more">
+                    Read more →
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGY -->
+        <section id="technology" class="container section">
+
+            <div class="section-title">
+                <h2>Technology</h2>
+                <span></span>
+            </div>
+
+            <div class="news-grid">
+
+                <article class="news-card">
+
+                    <img src="anh2.jpg" alt="Artificial intelligence">
+
+                    <div class="news-content">
+
+                        <p class="date">
+                            August 16, 2026
+                        </p>
+
+                        <h3>
+                            Artificial Intelligence Is Growing Rapidly
+                        </h3>
+
+                        <p>
+                            Artificial intelligence is becoming an
+                            important part of modern technology.
+                        </p>
+
+                        <a href="#">
+                            Read article →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="news-card">
+
+                    <img src="anh1.jpg" alt="Modern computer">
+
+                    <div class="news-content">
+
+                        <p class="date">
+                            August 15, 2026
+                        </p>
+
+                        <h3>
+                            Modern Computers Become More Powerful
+                        </h3>
+
+                        <p>
+                            New computer technologies provide better
+                            performance and improved user experiences.
+                        </p>
+
+                        <a href="#">
+                            Read article →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="news-card">
+
+                    <img src="anh3.png" alt="Digital education">
+
+                    <div class="news-content">
+
+                        <p class="date">
+                            August 14, 2026
+                        </p>
+
+                        <h3>
+                            Digital Technology Supports Education
+                        </h3>
+
+                        <p>
+                            Digital tools help students learn more
+                            effectively and access information easily.
+                        </p>
+
+                        <a href="#">
+                            Read article →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCIENCE -->
+        <section id="science" class="info-section">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Science</h2>
+                    <span></span>
+                </div>
+
+                <div class="info-box">
+
+                    <div>
+                        <h2>
+                            Science and Technology
+                        </h2>
+
+                        <p>
+                            Science and technology play an important
+                            role in the development of modern society.
+                            New discoveries help improve our lives and
+                            create new opportunities.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+        <section id="education" class="container section">
+
+            <div class="section-title">
+                <h2>Education</h2>
+                <span></span>
+            </div>
+
+            <div class="education-box">
+
+                <h2>
+                    Technology in Education
+                </h2>
+
+                <p>
+                    Online learning platforms, digital libraries and
+                    educational applications are changing the way
+                    students study.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CONTACT -->
+    <footer id="contact">
+
+        <div class="container footer-content">
+
+            <div>
+                <h2>TechNews</h2>
+
+                <p>
+                    Technology • Science • Education
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#technology">Technology</a>
+                <a href="#science">Science</a>
+                <a href="#education">Education</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- EXTRA 1: HOME BUTTON -->
+        <a href="#home" class="home-button" title="Back to home">
+            ⌂
+        </a>
+
+
+        <!-- EXTRA 2: SHARE BUTTON -->
+        <button class="share-button" onclick="sharePage()" title="Share">
+            ↗
+        </button>
+
+        <p class="copyright">
+            © 2026 TechNews. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- EXTRA 3: MOBILE MENU -->
+    <script>
+
+        function toggleMenu() {
+
+            const menu = document.getElementById("menu");
+
+            menu.classList.toggle("show");
+
+        }
+
+
+        // EXTRA 4: SHARE FUNCTION
+        function sharePage() {
+
+            if (navigator.share) {
+
+                navigator.share({
+                    title: "TechNews",
+                    text: "Check out this technology website!",
+                    url: window.location.href
+                });
+
+            } else {
+
+                alert("Copy the website link to share it.");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
